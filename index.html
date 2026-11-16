@@ -112,7 +112,8 @@ footer {
   color: #a99bbd;
   padding: 20px;
 }
-</style>
+</style><link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#101020">
 </head>
 
 <body>
@@ -653,6 +654,12 @@ function previewProject() {
     "\n\nMUSIC: " + project.music +
     "\nSOUND: " + project.sound +
     "\nVOLUME: " + project.volume;
+}
+</script><script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js");
+  });
 }
 </script>/body>
 </html>
